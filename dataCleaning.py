@@ -139,3 +139,14 @@ vec = TfidfVectorizer(ngram_range=(1,2), tokenizer=tokenize,
                smooth_idf=1, sublinear_tf=1 )
 trn_term_doc = vec.fit_transform(train[COMMENT])
 test_term_doc = vec.transform(test[COMMENT])
+
+temp_df=train.iloc[:,2:-1]
+# filter temp by removing clean comments
+# temp_df=temp_df[~train.clean]
+
+corr=temp_df.corr()
+plt.figure(figsize=(10,8))
+sns.heatmap(corr,
+            xticklabels=corr.columns.values,
+            yticklabels=corr.columns.values, annot=True, cmap="YlGnBu")
+plt.savefig('corr_heatmap1.png')
