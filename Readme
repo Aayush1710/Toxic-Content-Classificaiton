@@ -1,3 +1,14 @@
 # Toxic-Content-Classificaiton
 
 Our project, is based on a kaggle competition, and aims towards detection of toxiccomments on Wikipedia. We’ll be experimenting using variants non-neural modelsusing NB and Logistic regression for toxic text classification, but since their perfor-mance varies greatly depending on the model parameters variant, features used andtask/ dataset, we then created deep neural network model to detect various subtletiesof toxicities in the dataset.  We show that the inclusion of word bigram featuresgives consistent gains on sentiment analysis tasks for short snippet sentiment tasks,NB features in Logistic regression actually does better than Logistic regression(while for longer documents, it’s the other way round). Based on such observations,we aim to compare the scores for very strong non-neural network models and deeparchitectures to parameterize when each of those perform better. To contribute, ourmodel improves the ROC Score and provide an efficient algorithm to detect toxiccomments on Wikipedia.
+
+
+
+IMPORTANT:
+To run LSTM model with Glove Embeddings, download the embeddings from here: https://drive.google.com/open?id=1E6h6ahdqxkWMJ_bD8XWjHd2xI2a4rqmp
+and put them inside the data folder.
+
+If you wish to run the LSTM models: please make sure that data path points towards the data folder here.
+Best model weights will be stored in the Weights folder once you run the files.
+
+Use python 3.6+
